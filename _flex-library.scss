@@ -1,0 +1,33 @@
+
+@mixin flex-full-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Flex Vertical Orientation Full Range
+
+@mixin flex-vertical-orientation ($flex_direction, $flex_orientation) {
+    display: flex;
+    @if($flex_direction == row) {
+        align-items: $flex_orientation;
+    }
+    @else {
+        flex-direction: column;
+        justify-content: $flex_orientation;
+    }
+    
+}
+
+// Flex Horizontal Orientation Full Range
+
+@mixin flex-horizontal-orientation ($flex_direction, $flex_orientation) {
+    display: flex;
+    @if($flex_direction == row) {
+        justify-content: $flex_orientation;
+    }
+    @else {
+        flex-direction: column;
+        align-items: $flex_orientation;
+    }
+}
